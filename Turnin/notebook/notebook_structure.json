@@ -1,0 +1,138 @@
+{
+  "notebook_path": "C:\\Users\\fabio\\OneDrive - GUSCanada\\VSCODEGIT\\MyUNFrepo\\MLFINALINDIVIDUAL\\MLFINAL\\Turnin\\notebook\\Seeds_ML_FINALPRJ_NF1002000.ipynb",
+  "total_cells": 0,
+  "markdown_cells": 0,
+  "code_cells": 0,
+  "tasks": [],
+  "sections": [],
+  "key_variables": [],
+  "imports": [],
+  "task_flow": {
+    "Task 1": "Data Loading and EDA",
+    "Task 1.01": "Load dataset from UCI",
+    "Task 1.02": "Class distribution and statistics",
+    "Task 2": "Data Preprocessing",
+    "Task 2.01": "Check missing values",
+    "Task 2.02": "Train/Test split (80/20)",
+    "Task 2.03": "StandardScaler normalization",
+    "Task 2.04": "Noise injection (\u03c3=0.02)",
+    "Task 3": "Model Design and Training",
+    "Task 3.01": "Build MLP (7\u219264\u219232\u21923)",
+    "Task 3.02": "Apply Dropout regularization",
+    "Task 3.03": "Train model (100 epochs)",
+    "Task 4": "Hyperparameter Comparison",
+    "Task 4.01": "Compare dropout rates (0.2 vs 0.4)",
+    "Task 5": "Final Evaluation",
+    "Task 5.01": "Test set evaluation",
+    "Task 5.02": "Classification reports",
+    "Task 5.03": "Confusion matrix",
+    "Task 5.04": "Final recommendations",
+    "Task 6": "K-Fold Cross-Validation",
+    "Task 6.01": "Setup 5-Fold CV",
+    "Task 6.02": "Train across folds",
+    "Task 6.03": "Calculate statistics",
+    "Task 6.04": "Visualize results",
+    "Task 6.05": "Compare with single split"
+  },
+  "video_segments": {
+    "Segment 0": {
+      "title": "Introduction",
+      "description": "Assignment header, technical overview",
+      "starts_at_task": null,
+      "cell_range": [
+        0,
+        2
+      ]
+    },
+    "Segment 1": {
+      "title": "EDA",
+      "description": "Load data, column naming, class distribution, statistics",
+      "starts_at_task": "Task 1",
+      "cell_range": [
+        3,
+        8
+      ]
+    },
+    "Segment 2": {
+      "title": "Preprocessing",
+      "description": "Missing values, train/test split, scaling",
+      "starts_at_task": "Task 2.01",
+      "cell_range": [
+        9,
+        12
+      ]
+    },
+    "Segment 3": {
+      "title": "Noise Injection",
+      "description": "Data augmentation with Gaussian noise",
+      "starts_at_task": "Task 2.04",
+      "cell_range": [
+        13,
+        14
+      ]
+    },
+    "Segment 4": {
+      "title": "MLP Architecture",
+      "description": "Build neural network (7\u219264\u219232\u21923)",
+      "starts_at_task": "Task 3.01",
+      "cell_range": [
+        15,
+        16
+      ]
+    },
+    "Segment 5": {
+      "title": "Dropout Comparison",
+      "description": "Compare dropout rates 0.2 vs 0.4",
+      "starts_at_task": "Task 4.01",
+      "cell_range": [
+        20,
+        22
+      ]
+    },
+    "Segment 6": {
+      "title": "Training",
+      "description": "Train with early stopping",
+      "starts_at_task": "Task 3.03",
+      "cell_range": [
+        18,
+        19
+      ]
+    },
+    "Segment 7": {
+      "title": "Test Results",
+      "description": "Evaluate accuracy and metrics",
+      "starts_at_task": "Task 5.01",
+      "cell_range": [
+        23,
+        24
+      ]
+    },
+    "Segment 8": {
+      "title": "Confusion Matrix",
+      "description": "Visualize classification results",
+      "starts_at_task": "Task 5.03",
+      "cell_range": [
+        26,
+        27
+      ]
+    },
+    "Segment 9": {
+      "title": "K-Fold Cross-Validation",
+      "description": "5-Fold CV for robust evaluation",
+      "starts_at_task": "Task 6",
+      "cell_range": [
+        29,
+        35
+      ]
+    },
+    "Segment 10": {
+      "title": "Wrap-Up",
+      "description": "Final results and conclusion",
+      "starts_at_task": null,
+      "cell_range": [
+        36,
+        -1
+      ]
+    }
+  }
+}
