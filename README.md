@@ -6,6 +6,20 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-green.svg)](https://creativecommons.org/licenses/by/4.0/)
 
+## 📑 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Key Highlights](#-key-highlights)
+- [Dataset Information](#-dataset-information)
+- [Getting Started](#-getting-started)
+- [Model Architecture](#-model-architecture)
+- [Performance Results](#-performance-results)
+- [Machine Learning Pipeline](#-machine-learning-pipeline)
+- [Project Structure](#-project-structure)
+- [Academic Context](#-academic-context)
+- [Important Links](#-important-links)
+- [Technologies Used](#-technologies-used)
+
 ## 📊 Project Overview
 
 This project implements an optimized Multi-Layer Perceptron (MLP) neural network to classify three varieties of wheat seeds—**Kama**, **Rosa**, and **Canadian**—using seven geometric features derived from soft X-ray imaging techniques.
@@ -53,17 +67,41 @@ This project implements an optimized Multi-Layer Perceptron (MLP) neural network
 
 ### 📋 Prerequisites
 
-Ensure you have Python 3.8+ installed, then install the required packages:
+**System Requirements:**
 
-```bash
-pip install pandas numpy scikit-learn tensorflow matplotlib seaborn
-```
+- Python 3.8 or higher
+- pip (Python package installer)
+- 2GB RAM minimum
+- Internet connection (for dataset download)
 
-Or use the requirements file (if available):
+**Installing Dependencies:**
+
+All required packages are listed in `requirements.txt`. Install them using:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+**Included Packages:**
+
+- `pandas>=1.3.0` - Data manipulation and analysis
+- `numpy>=1.21.0` - Numerical computing
+- `scikit-learn>=1.0.0` - Machine learning utilities
+- `tensorflow>=2.8.0` - Deep learning framework
+- `matplotlib>=3.4.0` - Data visualization
+- `seaborn>=0.11.0` - Statistical visualization
+- `jupyter>=1.0.0` - Notebook environment
+
+<details>
+<summary><b>Manual Installation (Alternative)</b></summary>
+
+If you prefer to install packages individually:
+
+```bash
+pip install pandas numpy scikit-learn tensorflow matplotlib seaborn jupyter
+```
+
+</details>
 
 ### ▶️ Running the Project
 
@@ -74,12 +112,20 @@ pip install -r requirements.txt
    cd MLFINAL
    ```
 
-2. **Open the notebook:**
+2. **Install dependencies:**
 
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Launch Jupyter Notebook:**
+
+   ```bash
+   jupyter notebook
+   ```
+
+4. **Open and run the notebook:**
    - Navigate to `Turnin/notebook/Seeds_ML_FINALPRJ_NF1002000.ipynb`
-   - Open in Jupyter Notebook or JupyterLab
-
-3. **Execute:**
    - Run all cells sequentially (Cell → Run All)
    - Dataset will be automatically downloaded from UCI Repository on first run
 
@@ -112,8 +158,11 @@ The neural network employs a feed-forward architecture optimized for this classi
 **Model Specifications:**
 
 - **Total Parameters:** 2,691 (all trainable)
+  - Input→Hidden1: 7×64 + 64 = 512
+  - Hidden1→Hidden2: 64×32 + 32 = 2,080
+  - Hidden2→Output: 32×3 + 3 = 99
 - **Optimizer:** Adam (adaptive learning rate)
-- **Loss Function:** Categorical Cross-Entropy
+- **Loss Function:** Sparse Categorical Cross-Entropy
 - **Regularization:** Dropout (0.2) + Early Stopping (patience=15)
 
 ## 📈 Performance Results
@@ -162,14 +211,23 @@ The neural network employs a feed-forward architecture optimized for this classi
 The project follows a systematic, reproducible workflow:
 
 ```mermaid
-graph LR
-    A[Data Acquisition] --> B[Preprocessing]
-    B --> C[Data Augmentation]
-    C --> D[Model Design]
-    D --> E[Training]
-    E --> F[Hyperparameter Tuning]
-    F --> G[Cross-Validation]
-    G --> H[Performance Evaluation]
+graph TD
+    A[📥 Data Acquisition] --> B[🔧 Preprocessing]
+    B --> C[🔄 Data Augmentation]
+    C --> D[🧠 Model Design]
+    D --> E[🏋️ Training]
+    E --> F[⚙️ Hyperparameter Tuning]
+    F --> G[✅ Cross-Validation]
+    G --> H[📊 Performance Evaluation]
+
+    style A fill:#e1f5ff
+    style B fill:#fff4e1
+    style C fill:#f3e5f5
+    style D fill:#e8f5e9
+    style E fill:#fff3e0
+    style F fill:#fce4ec
+    style G fill:#e0f2f1
+    style H fill:#f1f8e9
 ```
 
 | Step                         | Process                             | Output                    |
@@ -202,6 +260,8 @@ MLFINAL/
 ├── 🗂️ bkp/                                       # Backup and archived versions
 │
 ├── 📖 README.md                                  # This documentation file
+├── 📦 requirements.txt                           # Python dependencies
+├── 📊 Notebook_Analysis_Report.md                # Comprehensive notebook analysis
 │
 └── 🚫 .gitignore                                 # Git version control exclusions
 ```
