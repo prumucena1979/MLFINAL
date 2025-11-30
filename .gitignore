@@ -47,6 +47,7 @@ env/
 
 # Data files (large)
 *.csv
+*.txt
 *.zip
 *.tar.gz
 *.7z
@@ -75,6 +76,7 @@ results/
 
 # Exclude specific files but keep dataset structure
 !DATASET/seeds/seeds_dataset.txt
+!README.md
 
 # Backup files
 *.ipynb.bak
